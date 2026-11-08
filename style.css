@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html::-webkit-scrollbar {
+    display: none;
+    scroll-behavior: smooth;
+}
+:root {
+    --color-dark: #1C1D20;
+    --color-dark-dark: #141517;
+    --color-light: #FFFFFF;
+    --color-blue: #455CE9;
+    --color-blue-dark: #334BD3;
+    --color-gray: #999D9E;
+    --color-lightgray: #E9EAEB;
+    --color-white: #FFFFFF;
+    --color-border: rgba(28, 29, 32, 0.175);
+    --color-border-solid: #D2D2D2;
+    --color-border-light: rgba(255, 255, 255, 0.2);
+    --color-border-solid-light: #545557;
+    --color-text: #1C1D20;
+    --color-text-light: #FFF;
+    --alert-error: #ff4444;
+    --alert-success: #24C958;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h1, h2 {
+    font-family: "Archivo", sans-serif;
+}
+
+h3 {
+    font-family: "Instrument Serif", serif;
+}
+
+h4 {  
+    font-family: "Geist Mono", monospace;
+    text-transform: uppercase;
+}
+
+/* h5, h6 {
+    
+} */
+
+p {
+    font-family: "Inter", sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.hero-container {
+    background-image: url('./images/hero-img.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+}
+
+.hero-text {
+    text-align: center;
+    /* position: absolute;
+    bottom: 2rem; */
+    /* left: 50%;
+    right: 50%;
+    transform: translateX(-50%, -50%); */
+}
+
+.hero-text h3 {
+    font-size: clamp(3rem, 20vw, 6rem);
+    line-height: 1;
+    color: var(--color-text-light);
+    font-style: italic;
+}
+
+.hero-text h3 span {
+    color: var(--alert-error);
+}
+.hero-img {
+    position: relative;
+}
+
+.hero-text .id-text {
+    color: var(--color-text-light);
+}
