@@ -5,10 +5,25 @@
     padding: 0;
     box-sizing: border-box;
 }
-html::-webkit-scrollbar {
+
+body, button {
+    font-family: "Instrument Serif", serif;
+}
+
+button {
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.1);
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+}
+/* html::-webkit-scrollbar {
     display: none;
     scroll-behavior: smooth;
-}
+} */
 :root {
     --color-dark: #1C1D20;
     --color-dark-dark: #141517;
@@ -31,81 +46,108 @@ html::-webkit-scrollbar {
     max-width: 1200px;
     margin: 0 auto;
 }
-h1, h2 {
-    font-family: "Archivo", sans-serif;
+
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
 }
 
-h3 {
-    font-family: "Instrument Serif", serif;
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
-h4 {  
-    font-family: "Geist Mono", monospace;
-    text-transform: uppercase;
-}
-
-/* h5, h6 {
-    
-} */
-
-p {
-    font-family: "Inter", sans-serif;
-}
-
-img {
-    width: 100%;
+header {
+    background-image: url("images/adib-right.png");
     height: 100vh;
-    object-fit: cover;
-}
-.hero-container {
-    background-image: url('./images/adib-right-1.png');
-     /* background:
-    radial-gradient(ellipse at 50% 43%, rgba(91, 0, 176, .55) 0%, transparent 42%),
-    radial-gradient(ellipse at 23% 76%, rgba(0, 80, 255, .88) 0%, transparent 42%),
-    radial-gradient(ellipse at 82% 70%, rgba(102, 0, 255, .58) 0%, transparent 38%),
-    linear-gradient(125deg, #10052d 0%, #180344 48%, #09051d 100%); */
-    background-position: center;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
-    position: relative;
+    aspect-ratio: 16 / 9;
+    background-position: center;
+    /* position: relative; */
+
+}
+
+header::after {
+    content: '';
+    height: 100vh;
+    width: 100%;
+   
+    background-image: linear-gradient(red, green);
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+
+}
+.header__wrapper {
     display: flex;
-    align-items: end;
-    justify-content: center;
-}
-.hero-container::after {
-    background-image: linear-gradient(red, blue);
-    opacity: 999;
-    z-index: 1;
-    position: absolute;
-}
-.hero-text {
-    text-align: center;
-    /* position: absolute;
-    bottom: 2rem; */
-    /* left: 50%;
-    right: 50%;
-    transform: translateX(-50%, -50%); */
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
 }
 
-.hero-text h3 {
+
+.header__wrapper ul {
+    display: flex;
+    gap: 1.25rem;
+}
+.header__wrapper ul a:hover {
+    text-decoration: underline;
+}
+/* .header__wrapper button {
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.1);
+} */
+
+.header__wrapper button:hover {
+    background: var(--alert-error);
+    color: var(--color-text-light);
+}
+
+
+/* Hero   */
+
+.hero__text {
+    margin-top: 100px;
+}
+
+.hero__text h4 {
+    font-size: 1.5rem;
+    background: var(--alert-success);
+    padding: 1rem;
+    transform: rotate(5deg);
+    margin-bottom: -1rem;
+    z-index: -1;
+    width: 16rem;
+
+    /* margin-bottom: 1rem; */
+}
+.hero__text h1 {
     font-size: 6rem;
-    line-height: 1;
-    color: var(--color-text-light);
-    font-style: italic;
+    width: 32rem;
+    /* margin-bottom: 1rem; */
 }
 
-.hero-text h3 span {
-    color: var(--alert-error);
-}
-.hero-img {
-    position: relative;
-}
-
-.hero-text .id-text {
-    color: var(--color-text-light);
+.hero__text p {
+    margin-block: 1rem;
+    width: 32rem;
+    font-size: 1.25rem;
 }
 
-.about-container {
-    height: 80vh;
+.hero__btn button {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-top: 2rem;
+    transition: all ease-in .2s;
+}
+
+.hero__btn button:hover {
+    margin-left: 8px;
 }

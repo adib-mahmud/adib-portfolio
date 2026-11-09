@@ -1,0 +1,7 @@
+/* Mobile  */
+
+@media screen and (max-widht: 375px){
+    header {
+        padding: 1rem;
+    }
+}
